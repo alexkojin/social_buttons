@@ -16,18 +16,16 @@ module SocialButtons
     def fb_like_button(options={})
       href = options[:url] || request.url
       params = options.slice(:layout, :send, :width, :height, :show_faces, :action, :colorscheme, :font, :appId)
-
-      params = {
-        :href => href,
-        :layout => 'button_count',
-        :send => false,
-        :width => 450,
-        :height => 21,
-        :show_faces => false,
-        :action => 'like', 
-        :colorscheme => 'light',
-        :font => 'verdana'
-      }.merge(params)
+      params.reverse_merge!({:href => href,
+                             :layout => 'button_count',
+                             :send => false,
+                             :width => 450,
+                             :height => 21,
+                             :show_faces => false,
+                             :action => 'like', 
+                             :colorscheme => 'light',
+                             :font => 'verdana'
+                            })
 
       style = "border:none; overflow:hidden; width:#{params[:width]}px; height:#{params[:height]}px;"
 
@@ -35,7 +33,8 @@ module SocialButtons
                                :scrolling => 'no',
                                :frameborder => 0,
                                :allowTransparency => true,
-                               :style => style
+                               :style => style,
+                               :class => 'fb-like-btn'
     end
 
     # Twitter button
