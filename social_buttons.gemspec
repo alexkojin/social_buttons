@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["alexkojin@gmail.com"]
   gem.description   = "Helper methods for to easy integrate social buttons 'Pin It', 'Like', 'Tweet it', 'G+' in Rails app."
   gem.summary       = ""
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/alexkojin/social_buttons.git"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
