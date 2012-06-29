@@ -12,18 +12,22 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install social_buttons
-
 ## Usage
 
-TODO: Write usage instructions here
+In application.js add:
 
-## Contributing
+    //= require social_buttons
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+In view:
+
+    <%= pin_it_button url: @product.url, media: @product.large_image_url, description: @product.description %>
+    
+    <%= fb_like_button %>
+
+    <%= twitter_share_button count: 'none' %>
+
+    <%= google_plus_button size: 'medium', annotation: 'none' %>
+
+More details you can find in the [code][1] 
+
+  [1]: https://github.com/alexkojin/social_buttons/blob/master/lib/social_buttons/helper.rb
