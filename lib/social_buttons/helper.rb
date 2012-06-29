@@ -27,7 +27,6 @@ module SocialButtons
         :action => 'like', 
         :colorscheme => 'light',
         :font => 'verdana'
-        # :appId => 108856054722 is optional
       }.merge(params)
 
       style = "border:none; overflow:hidden; width:#{params[:width]}px; height:#{params[:height]}px;"
