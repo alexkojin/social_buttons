@@ -9,7 +9,7 @@
         var s = document.createElement('script');
         s.type = 'text/javascript';
         s.async = true;
-        s.id = id;
+        if(id) s.id = id;
         s.src = src;
         var x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
